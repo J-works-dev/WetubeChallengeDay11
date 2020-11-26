@@ -1,0 +1,6 @@
+mixin movieBlock(movie = {})
+  movieBlock
+    a(href=`/movie.id`)
+      h1.movie.movieBlock__title=movie.title
+      p.movieBlock__synopsis=movie.synopsis
+      li.movieBlock__genres=movie.genres

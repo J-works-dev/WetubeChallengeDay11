@@ -1,0 +1,11 @@
+extends index
+include movieBlock
+
+block content
+  .movies
+    each item in movies
+      +movieBlock({
+        title:item.title,
+        synopsis:item.synopsis,
+        genres:item.genres
+      })

@@ -1,0 +1,10 @@
+extends index
+include movieBlock
+
+block content
+  h1 Movies!
+  .movies
+    each item in movies
+      +movieBlock({
+        title:item.title
+      })
