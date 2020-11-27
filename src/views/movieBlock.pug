@@ -1,6 +1,8 @@
 mixin movieBlock(movie = {})
   movieBlock
-    a(href=routes.movieDetail(movie.id))
+    a(href=`/${movie.id}`)
       h3=movie.title
+      //- p=movie.year
+      //- p=movie.rating
       //- p.movieBlock__synopsis=movie.synopsis
       //- li.movieBlock__genres=movie.genres

@@ -4,7 +4,7 @@ import {
   getMovieByMinimumRating,
   getMovieByMinimumYear
 } from "./db";
-import routes from "./routes";
+// import routes from "./routes";
 
 export const home = (req, res) => {
   // console.log("I'm in middleware home");
@@ -24,7 +24,7 @@ export const movieDetail = (req, res) => {
   } = req;
   try {
     const movie = getMovieById(id);
-    res.render("detail", { pageTitle: "Detail", movie });
+    res.render("detail", { pageTitle: movie.title, movie });
   } catch (error) {
     res.render("404", { pageTitle: "404 Error", error });
   }
@@ -37,7 +37,7 @@ export const filterMovie = (req, res) => {
     if (rating) {
       const movies = getMovieByMinimumRating(rating);
       res.render("movies", {
-        pageTitle: `Searching by Year: ${rating}`,
+        pageTitle: `Searching by Rating: ${rating}`,
         movies
       });
     } else if (year) {
