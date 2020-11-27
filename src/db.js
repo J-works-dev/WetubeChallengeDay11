@@ -15,6 +15,9 @@ const startDB = async () => {
       }
     } = await client.get("/list_movies.json", { params: { limit: 50 } }));
     console.log("✅  Movie DB Ready!");
+    // movies.forEach(function (movie) {
+    // console.log(movies);
+    // });
   } catch (e) {
     console.log(e.message);
     console.log("❌ Can't initialize DB, contact Nico");

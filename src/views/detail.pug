@@ -2,10 +2,9 @@ extends index
 include movieBlock
 
 block content
-  .movies
-    each item in movies
-      +movieBlock({
-        title:item.title,
-        synopsis:item.synopsis,
-        genres:item.genres
-      })
+  .movie
+    h3=movie.title
+    p=movie.synopsis
+    ul
+      each genre in movie.genres
+        li=genre
