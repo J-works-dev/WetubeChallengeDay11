@@ -1,2 +1,3 @@
 # WetubeChallengeDay11
-Created with CodeSandbox
+
+Nomad Academy YouTube clone coding challenge Day 11
